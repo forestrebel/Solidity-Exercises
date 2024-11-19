@@ -7,11 +7,15 @@ contract PureVsView {
 
     // this code does not compile. Change it so
     // that it compiles.
-    function getX() public pure returns (uint256) {
+
+    // a Pure function is self-contained
+    // it doesn't read from or write to anything
+    // declared outside the function
+    function getX() public view returns (uint256) {
         return x;
     }
 
-    function getY() public pure returns (uint256) {
+    function getY() public view returns (uint256) {
         return y;
     }
 }

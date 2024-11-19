@@ -16,6 +16,9 @@ contract OriginVsSender {
     uint256 public number;
 
     function setNumber(uint256 num) external {
+        (bool originEqSender) = (tx.origin == msg.sender);
+        require(originEqSender, "origin != sender! reverting...");
+        number = num;
         /// your code here
     }
 }

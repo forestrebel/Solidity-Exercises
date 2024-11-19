@@ -7,5 +7,11 @@ contract IsSorted {
      */
     function isSorted(uint256[] calldata arr) public view returns (bool) {
         // your code here
+
+        if (arr.sizeof() == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

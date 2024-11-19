@@ -10,16 +10,19 @@ contract SpecialNumbers {
 
     /// make @param n special
     function makeNumberSpecial(uint256 n) public {
+        isSpecial[n] = true;
         // your code here
     }
 
     /// make @param n not special
     function makeNumberNotSpecial(uint256 n) public {
+        isSpecial[n] = false;
         // your code here
     }
 
     /// return if a number @param n is special or not
     function isNumberSpecial(uint256 n) public view returns (bool) {
+        return isSpecial[n];
         // your code here
     }
 }

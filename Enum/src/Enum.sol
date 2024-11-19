@@ -17,7 +17,23 @@ contract ExampleEnum {
         Sunday
     }
 
+    // passes but is hacky -- figure out how enums work for real
     function isWeekend(uint256 index) public pure returns (bool) {
+        if (index >= 5) {
+            return true;
+        } else {
+            return false;
+        }
+        
+        //DayOfWeek.Friday
+        
+        /*if (DayOfWeek[index] == "Saturday") {
+            return true;
+        } else if (DayOfWeek[index] == "Sunday") {
+            return true;
+        } else {
+            return false;
+        }*/
         // your code here
     }
 }

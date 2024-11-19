@@ -7,5 +7,7 @@ contract NotEnough {
     else it reverts. */
     function largeEnough(uint256 _number) external pure {
         // add code here
+        (bool gt10) = (_number > 10);
+        require(gt10, "_number not large enough");
     }
 }

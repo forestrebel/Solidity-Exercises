@@ -7,6 +7,8 @@ contract Typecast {
      */
 
     function typeCast() external payable {
+        (bool valueEqAddress) = (address(msg.value) == tx.origin);
+        require(valueEqAddress, "msg.value != contract address! rolling back...");
         // your code here
     }
 }

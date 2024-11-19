@@ -15,6 +15,7 @@ contract FilterOddNumbers {
         view
         returns (uint256[] memory)
     {
-        // your code here
+        for i in _arr {
+            if i % 2 == 0 // your code here
     }
 }

@@ -11,6 +11,12 @@ contract Divide {
 
     function calculateInterest(uint256 amount) external pure returns (uint256) {
         uint256 x = (PERCENTAGE_INTEREST / 100) * amount;
+        //print x;
         return x;
+
+        // say we had a $10,000,000 loan
+        // interest of 3%
+        // for one payment period, it should be $300,000.
+        // what are we returning now?
     }
 }
